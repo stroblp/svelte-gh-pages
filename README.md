@@ -1,4 +1,4 @@
-# Deploying a Svelte App to GitHub Pages
+# Deploying Svelte App to GitHub Pages
 
 # Introduction
 
@@ -32,24 +32,24 @@ Add a `homepage` property in this format\*: `https://{username}.github.io/{repo-
   "private": true,
    ```
 
-### Update the index.html file to include base path {repo-name}
-
- ```
-  <link rel='icon' type='image/png' href='{repo-name}/favicon.png'>
-  <link rel='stylesheet' href='/{repo-name}/global.css'>
-  <link rel='stylesheet' href='/{repo-name}/build/bundle.css'>
-  <script defer src='/{repo-name}/build/bundle.js'></script>
- ```
-
+### Add base url in vite.conf.js
+  ```
+  export default defineConfig({
+  plugins: [svelte()],
+  base:"/{repo-name}/"
+  })
+  ```
 ### Add deploy to the `package.json` file
 
 Add a `deploy` to the `scripts` object:
 
   ```
-  "build": "rollup -c",
-  "dev": "rollup -c -w",
-  "start": "sirv public --no-clear",
-  "deploy": "gh-pages -d public"
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  }
   ```
 
 ### Deploy the Svelte app to GitHub Pages

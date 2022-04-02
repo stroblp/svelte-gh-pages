@@ -6,8 +6,7 @@
 <main>
   <img src={logo} alt="Svelte Logo" />
   <h1>Hello world!</h1>
-
-  <Counter />
+  <h2>hello Github Pages!</h2>
 
   <p>
     Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
