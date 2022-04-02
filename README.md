@@ -11,7 +11,7 @@ Create Svelte app
   ```
   npm create vite@latest
   ```
-
+  
 ### Install the `gh-pages` npm package
 
 Install the [`gh-pages`](https://github.com/tschaub/gh-pages) npm package 
@@ -20,6 +20,7 @@ Install the [`gh-pages`](https://github.com/tschaub/gh-pages) npm package
   $ npm install gh-pages --save-dev
    ```
 
+Follow instructions
 
 ### Add a `homepage` property to the `package.json` file
 
@@ -32,7 +33,7 @@ Add a `homepage` property in this format\*: `https://{username}.github.io/{repo-
   "private": true,
    ```
 
-### Add base url in vite.conf.js
+### Add base url in `vite.conf.js`
   ```
   export default defineConfig({
   plugins: [svelte()],
@@ -54,11 +55,11 @@ Add a `deploy` to the `scripts` object:
 
 ### Deploy the Svelte app to GitHub Pages
 
-Build and deploy the Svlete app to GitHub Pages
+Build and deploy the Svelte app to GitHub Pages
 
   ```
-  $ npm run build
-  $ npm run deploy
+  npm run build
+  npm run deploy
    ```
 
 ### The end
